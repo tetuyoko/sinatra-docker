@@ -8,7 +8,7 @@ libyaml-dev libxml2-dev libxslt-dev
 RUN apt-get clean
 
 # Install ruby
-RUN wget -P /root/src
+RUN wget -P /root/src \
 ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz
 RUN cd /root/src; tar xvf ruby-2.0.0-p247.tar.gz
 RUN cd /root/src/ruby-2.0.0-p247; ./configure; make install
