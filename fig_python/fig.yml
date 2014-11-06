@@ -1,13 +1,20 @@
+# コンテナ名
 web:
+  # カレントディレクトリのDockfileからビルド
   build: .
   command: python app.py
   #command: ls
+
+  # ホスト:ゲスト
   ports:
     - "5000:5000"
   links:
     - db
     - redis
+
+# コンテナ名
 redis:
   image: redis:2.8.17
+# コンテナ名
 db:
   image: postgres:9.3
