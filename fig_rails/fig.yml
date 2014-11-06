@@ -4,7 +4,8 @@ db:
     - "5432"
 
 web:
-  build: .
+#build: .
+  image: tetuyoko/figrails:latest
   command: bundle exec rackup -p 3000
   volumes:
      - .:/myapp
