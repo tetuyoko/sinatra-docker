@@ -1,0 +1,10 @@
+web:
+  build: .
+  command: python app.py
+#  command: ls 
+  links:
+    - db
+  ports:
+    - "8000:8000"
+db:
+  image: postgres:9.3
