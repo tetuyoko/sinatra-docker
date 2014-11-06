@@ -1,10 +1,13 @@
 web:
   build: .
   command: python app.py
-#  command: ls 
   links:
     - db
   ports:
-    - "8000:8000"
+    - "5000:5000"
+  links:
+    - redis
+redis:
+  image: redis:2.8.17   
 db:
   image: postgres:9.3
